@@ -26,32 +26,32 @@
 # Tratamento de Erros
 # Revisão do código
 
-veiculos = []
+# veiculos = []
 
-while True:
-    print("\n==== SHOPPING - CANCELA ====")
-    print("1 - Entrada de veículo")
-    print("2 - Saída de veículo")
-    print("3 - Relatório")
-    print("4 - Sair")
+# while True:
+#     print("\n==== SHOPPING - CANCELA ====")
+#     print("1 - Entrada de veículo")
+#     print("2 - Saída de veículo")
+#     print("3 - Relatório")
+#     print("4 - Sair")
 
-    opcao = input("Escolha uma opção: ")
+#     opcao = input("Escolha uma opção: ")
 
-    # PASSO 1 - Entrada
-    if opcao == "1":
-        placa = input("Digite a placa do veículo: ")
+#     # PASSO 1 - Entrada
+#     if opcao == "1":
+#         placa = input("Digite a placa do veículo: ")
 
-        # Verifica se já entrou
-        existe = False
-        for v in veiculos:
-            if v["placa"] == placa and v["saida"] is None:
-                existe = True
+#         # Verifica se já entrou
+#         existe = False
+#         for v in veiculos:
+#             if v["placa"] == placa and v["saida"] is None:
+#                 existe = True
 
-        if existe:
-            print("ERRO: veículo já está no estacionamento!")
-        else:
-            tag = input("Possui TAG? (s/n): ")
+#         if existe:
+#             print("ERRO: veículo já está no estacionamento!")
+#         else:
+#             tag = input("Possui TAG? (s/n): ")
 
-            print("Pressione o botão para emitir ticket...")
-            print("Ticket emitido com sucesso!")
+#             print("Pressione o botão para emitir ticket...")
+#             print("Ticket emitido com sucesso!")
     

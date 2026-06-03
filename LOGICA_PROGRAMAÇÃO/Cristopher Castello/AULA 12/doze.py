@@ -46,7 +46,7 @@ usuario_idade.grid(row=1,column=1,pady=10,padx=10)
 combo_nivel = tk.ttk.Combobox(janela_bemvindo, values=["Brasil", "Marrocos", "Egito", "Escócia"], width=30)
 combo_nivel.grid(row=1, column=2, pady=10, padx=10)
 
-# Botão
+# # Botão
 btn_enviar_mensagem = tk.Button(janela_bemvindo, text="Enviar Mensagem", command=bemvindo,  bg="#9dfff0" , fg="black")
 btn_enviar_mensagem.grid(row=3, column=0, pady=10, padx=10)
 
@@ -56,5 +56,6 @@ btn_segunda_janela.grid(row=3, column=1, pady=10, padx=10)
 btn_fechar_janela = tk.Button(janela_bemvindo, text="Fechar Janela", command=janela_bemvindo.destroy,  bg="#ff0000" , fg="black")
 btn_fechar_janela.grid(row=3, column=2, pady=10, padx=10)
 
-# Rodar interface
+# # Rodar interface
 janela_bemvindo.mainloop()
+

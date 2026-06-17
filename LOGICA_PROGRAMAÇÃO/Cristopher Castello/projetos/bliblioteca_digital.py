@@ -1,60 +1,95 @@
-import tkinter as tk
-from tkinter import messagebox, ttk
+# import tkinter as tk
+# from tkinter import messagebox, ttk
 
-def biblioteca():
-    livro_aluno = aluno_livro.get()
+# # Função
+# def biblioteca():
+#     tipo_usuario = combo_usuario.get()
+#     titulo = titulo_livro.get()
+#     nome = nome_usuario.get()
+#     categoria = combo_categoria.get()
+#     dias = aluno_emprestimo.get()
 
-    if livro_aluno == "":
-        messagebox.showwarning("Tipo de usuario")
-    else:
-        messagebox.showinfo("Bem-vindo", f"Olá {livro_aluno}")
-# janela
-janela_biblioteca = tk.Tk()
-janela_biblioteca.title("Biblioteca")
-janela_biblioteca.geometry("1920x1080")
+#     if tipo_usuario == "" or titulo == "" or nome == "" or categoria == "" or dias == "":
+#         messagebox.showwarning("Aviso", "Preencha todos os campos!")
+#     else:
+#         messagebox.showinfo(
+#             "Empréstimo",
+#             f"""Olá, {nome}!
 
-# labels
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text="Tipo de Usuário: ")
-lbl_messagem_aluno.grid(row=0,column=1,pady=10,padx=10)
+# Tipo de usuário: {tipo_usuario}
+# Livro: {titulo}
+# Categoria: {categoria}
+# Dias de empréstimo: {dias}
+# """
+#         )
 
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text="Título do Livro : ")
-lbl_messagem_aluno.grid(row=1, column=1, pady=10, padx=10)
+# # Janela
+# janela_biblioteca = tk.Tk()
+# janela_biblioteca.title("Biblioteca")
+# janela_biblioteca.geometry("900x400")
 
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text="nome de usuario: ")
-lbl_messagem_aluno.grid(row=2, column=1, pady=10, padx=10)
+# # Labels
+# tk.Label(janela_biblioteca, text="Tipo de Usuário:").grid(row=0, column=1, padx=10, pady=10)
 
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text=" Categoria do Livro: ")
-lbl_messagem_aluno.grid(row=0, column=3, pady=10, padx=10)
+# tk.Label(janela_biblioteca, text="Título do Livro:").grid(row=1, column=1, padx=10, pady=10)
 
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text="Regras de Negócio\nAlunos: até 14 dias de graça\nomunidade: até 7 dias de graça\nTaxa adicional: R$ 5,00 por dia extra\nLivros Raros: apenas para alunos")
-lbl_messagem_aluno.grid(row=2, column=3, pady=10, padx=10)
+# tk.Label(janela_biblioteca, text="Nome do Usuário:").grid(row=2, column=1, padx=10, pady=10)
 
-lbl_messagem_aluno = tk.Label(janela_biblioteca, text=" Dias de Empréstimo: ")  
-lbl_messagem_aluno.grid(row=1, column=3, pady=10, padx=10)
+# tk.Label(janela_biblioteca, text="Categoria do Livro:").grid(row=0, column=3, padx=10, pady=10)
 
+# tk.Label(
+#     janela_biblioteca,
+#     text=(
+#         "Regras de Negócio\n"
+#         "Alunos: até 14 dias de graça\n"
+#         "Comunidade: até 7 dias de graça\n"
+#         "Taxa adicional: R$ 5,00 por dia extra\n"
+#         "Livros raros: apenas para alunos"
+#     ),
+# ).grid(row=2, column=3, padx=10, pady=10)
 
-#Entrys
-titulo_livro = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
-titulo_livro.grid(row=1,column=2,pady=10,padx=10)
+# tk.Label(janela_biblioteca, text="Dias de Empréstimo:").grid(row=1, column=3, padx=10, pady=10)
 
-nome_usuario = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
-nome_usuario.grid(row=2,column=2,pady=10,padx=10)
+# # Entrys
+# titulo_livro = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
+# titulo_livro.grid(row=1, column=2, padx=10, pady=10)
 
-aluno_emprestimo = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
-aluno_emprestimo.grid(row=1,column=4,pady=10,padx=10)
+# nome_usuario = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
+# nome_usuario.grid(row=2, column=2, padx=10, pady=10)
 
+# aluno_emprestimo = tk.Entry(janela_biblioteca, font=("Arial", 12), width=20)
+# aluno_emprestimo.grid(row=1, column=4, padx=10, pady=10)
 
-# componentes
-como_nivel = tk.ttk.Combobox(janela_biblioteca, values=["Aluno", "comunidade"], width=30)
-como_nivel.grid(row=0,column=2,pady=10,padx=10)
+# # Combobox
+# combo_usuario = ttk.Combobox(
+#     janela_biblioteca,
+#     values=["Aluno", "Comunidade"],
+#     width=20
+# )
+# combo_usuario.grid(row=0, column=2, padx=10, pady=10)
 
-como_nivel = tk.ttk.Combobox(janela_biblioteca, values=["comum", "raro"], width=30)
-como_nivel.grid(row=0,column=4,pady=10,padx=10)
+# combo_categoria = ttk.Combobox(
+#     janela_biblioteca,
+#     values=["Comum", "Raro"],
+#     width=20
+# )
+# combo_categoria.grid(row=0, column=4, padx=10, pady=10)
 
+# # Botões
+# btn_enviar = tk.Button(
+#     janela_biblioteca,
+#     text="Enviar Mensagem",
+#     command=biblioteca,
+#     bg="#9dfff0"
+# )
+# btn_enviar.grid(row=3, column=1, padx=10, pady=10)
 
+# btn_fechar = tk.Button(
+#     janela_biblioteca,
+#     text="Fechar Janela",
+#     command=janela_biblioteca.destroy,
+#     bg="#ff0000"
+# )
+# btn_fechar.grid(row=3, column=2, padx=10, pady=10)
 
-
-# botões
-btn_enviar_mensagem = tk.Button(janela_biblioteca, text="Validar emprestimo")
-
-janela_biblioteca.mainloop()
+# janela_biblioteca.mainloop()

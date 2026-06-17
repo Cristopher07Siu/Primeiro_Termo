@@ -13,6 +13,7 @@ while True:
 
         if chamar == "N" or chamar == "n":
             print("Você desejou não chamar o elevador")
+            break
 
         elif chamar == "S" or chamar == "s":
             print("O elevador está se locomovendo ao seu andar")
@@ -20,26 +21,104 @@ while True:
             destino = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
             pergunta_andar = input("Qual andar deseja se mover?: ")
-            quantidade = int(input("Quantas pessoas estão entrando?: "))
+            quantidade = input("Quantas pessoas estão entrando?: ")
 
-            if quantidade > 5:
+            if quantidade >= "5":
                 print("O peso está acima da capacidade\nO elevador deve fazer uma parada")
+                break
 
-            elif quantidade <= 5:
+            elif quantidade <= "5":
                 print("A capacidade está ok")
 
-                if int(pergunta_andar) in destino:
+            if pergunta_andar == "1":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
 
-                    print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
-                    print("Tela de Andar atual:")
+                for andar in range(0, 2):
+                    print(f"Andar {andar}º")
 
-                    for andar in range(0, int(pergunta_andar) + 1):
-                        print(f"Andar {andar}º")
+                print("Você chegou ao seu destino")
 
-                    print("Você chegou ao seu destino")
+            if pergunta_andar == "2":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
 
-                else:
-                    print("Andar inválido")
+                for andar in range(0, 3):
+                    print(f"Andar {andar}º")
 
-    except:
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "3":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 4):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "4":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 5):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "5":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 6):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "6":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 7):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "7":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 8):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "8":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 9):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "9":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 10):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+            if pergunta_andar == "10":
+                print(f"O elevador está subindo do {andar_atual}º andar até o {pergunta_andar}º andar")
+                print("Tela de Andar atual:")
+
+                for andar in range(0, 11):
+                    print(f"Andar {andar}º")
+
+                print("Você chegou ao seu destino")
+
+    except ValueError:
         print("Ocorreu um erro")
